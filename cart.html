@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Konga | Shopping Cart</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/webpage.css">
+    <link rel="stylesheet" href="css/cart.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ===========================
+        NAVIGATION
+============================ -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <h2>Konga</h2>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="webpage.html">
+                <i class="fa-solid fa-arrow-left"></i>
+                Continue Shopping
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+<!-- ===========================
+        PAGE HEADER
+============================ -->
+
+<section class="cart-header">
+
+    <h1>
+        <i class="fa-solid fa-cart-shopping"></i>
+        My Shopping Cart
+    </h1>
+
+    <p>
+        Review your selected items before proceeding to checkout.
+    </p>
+
+</section>
+
+<!-- ===========================
+        CART CONTENT
+============================ -->
+
+<section class="cart-container">
+
+    <!-- Cart Items -->
+
+    <div class="cart-items" id="cart-items">
+
+        <!-- JavaScript will display products here -->
+
+    </div>
+
+    <!-- Order Summary -->
+
+    <div class="cart-summary">
+
+        <h2>Order Summary</h2>
+
+        <hr>
+
+        <div class="summary-row">
+
+            <span>Total:</span>
+
+            <strong>
+
+                ₦<span id="total-price">0</span>
+
+            </strong>
+
+        </div>
+
+        <button id="clear-cart-btn" class="clear-cart-btn">
+
+            <i class="fa-solid fa-trash"></i>
+
+            Clear Cart
+
+        </button>
+
+        <button
+        class="checkout-btn"
+        onclick="window.location.href='checkout.html'">
+
+            Proceed to Checkout
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+        FOOTER
+============================ -->
+
+<footer>
+    <p>
+        © 2026 Santa Cruz | Konga Project
+    </p>
+</footer>
+
+<!-- ===========================
+        JAVASCRIPT
+============================ -->
+
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+
+</body>
+</html>

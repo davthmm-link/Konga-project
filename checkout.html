@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Konga | Checkout</title>
+
+    <link rel="stylesheet" href="css/webpage.css">
+    <link rel="stylesheet" href="css/checkout.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <h2>Konga</h2>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="cart.html">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back To Cart
+
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+<section class="checkout-header">
+
+    <h1>
+
+        <i class="fa-solid fa-credit-card"></i>
+
+        Checkout
+
+    </h1>
+
+    <p>
+        Complete your order details below.
+    </p>
+
+</section>
+
+<section class="checkout-container">
+
+    <!-- FORM -->
+
+    <div class="checkout-form">
+
+        <h2>Customer Information</h2>
+
+        <form id="checkout-form">
+
+            <input
+                type="text"
+                id="fullname"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Phone Number"
+                required>
+
+            <textarea
+                id="address"
+                placeholder="Delivery Address"
+                required></textarea>
+
+            <button type="submit">
+
+                Place Order
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- SUMMARY -->
+
+    <div class="checkout-summary">
+
+        <h2>Order Summary</h2>
+
+        <div id="checkout-items">
+
+        </div>
+
+        <hr>
+
+        <div class="summary-total">
+
+            Total:
+
+            ₦<span id="checkout-total">0</span>
+
+        </div>
+
+    </div>
+
+</section>
+<footer>
+    <p>© 2026 Santa Cruz | Konga Project</p>
+</footer>
+<script src="js/checkout.js"></script>
+
+</body>
+</html>

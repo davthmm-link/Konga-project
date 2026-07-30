@@ -266,3 +266,260 @@ body{
 .product-info button:hover{
     background:darkorange;
 }
+
+/* ==================================================
+                PRODUCT MODAL
+================================================== */
+
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.65);
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    z-index:9999;
+    animation:fadeIn .3s ease;
+}
+
+.modal-content{
+    background:#fff;
+    width:90%;
+    max-width:950px;
+    border-radius:15px;
+    display:flex;
+    gap:35px;
+    padding:35px;
+    position:relative;
+    animation:zoomIn .35s ease;
+}
+
+/* ================= LEFT ================= */
+
+.modal-left{
+    flex:1;
+}
+
+.modal-left img{
+    width:100%;
+    border-radius:12px;
+    object-fit:cover;
+}
+
+/* ================= RIGHT ================= */
+
+.modal-right{
+    flex:1;
+}
+
+.modal-right h2{
+    color:#222;
+    margin-bottom:15px;
+    font-size:30px;
+}
+
+/* ================= RATING ================= */
+
+.rating{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    color:#ffb400;
+    margin-bottom:20px;
+}
+
+.rating span{
+    color:#666;
+    margin-left:10px;
+    font-size:15px;
+}
+
+/* ================= CATEGORY ================= */
+
+.modal-category{
+    margin-bottom:15px;
+    color:#555;
+}
+
+/* ================= DESCRIPTION ================= */
+
+#modal-description{
+    line-height:1.8;
+    color:#666;
+    margin-bottom:20px;
+}
+
+/* ================= PRICE ================= */
+
+.modal-price{
+    color:#ff6600;
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+/* ================= STOCK ================= */
+
+.stock{
+    color:#28a745;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+
+.stock i{
+    margin-right:8px;
+}
+
+/* ================= BUTTONS ================= */
+
+.modal-buttons{
+    display:flex;
+    gap:15px;
+}
+
+#modal-cart-btn,
+#modal-wishlist-btn{
+
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+#modal-cart-btn{
+    background:#ff6600;
+    color:#fff;
+}
+
+#modal-cart-btn:hover{
+    background:#e65c00;
+    transform:translateY(-2px);
+}
+
+#modal-wishlist-btn{
+    background:#fff;
+    color:#ff3366;
+    border:2px solid #ff3366;
+}
+
+#modal-wishlist-btn:hover{
+    background:#ff3366;
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+/* ================= CLOSE BUTTON ================= */
+
+.close-btn{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:34px;
+    cursor:pointer;
+    color:#555;
+    transition:.3s;
+}
+
+.close-btn:hover{
+    color:red;
+    transform:rotate(90deg);
+}
+
+.product-buttons{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+.product-buttons button:first-child{
+    flex:1;
+}
+
+.wishlist-btn{
+    width:50px;
+    border:none;
+    background:#fff;
+    color:#ff3366;
+    border:2px solid #ff3366;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.wishlist-btn:hover{
+    background:#ff3366;
+    color:#fff;
+}
+
+.wishlist-btn.active{
+    background:#ff3366;
+    color:#fff;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .modal-content{
+
+        flex-direction:column;
+
+        padding:25px;
+
+    }
+
+    .modal-right h2{
+
+        font-size:24px;
+
+    }
+
+    .modal-price{
+
+        font-size:28px;
+
+    }
+
+    .modal-buttons{
+
+        flex-direction:column;
+    }
+}

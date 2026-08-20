@@ -129,6 +129,15 @@ body{
     display:flex;
     justify-content:space-between;
 }
+
+/* ===========================
+   FIXED NAVBAR PAGE SPACING
+=========================== */
+
+.has-fixed-navbar {
+    padding-top: 75px;
+}
+
 /* ===========================
         RESPONSIVE
 =========================== */

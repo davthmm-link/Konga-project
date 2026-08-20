@@ -2,24 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport"
+
           content="width=device-width, initial-scale=1.0">
+
     <title>Konga Clone | Santa Cruz</title>
+
     <link rel="stylesheet" href="css/webpage.css">
+
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
-<body>
+
+<body class="has-fixed-navbar">
+
 <!-- ===========================
         NAVIGATION
 =========================== -->
 <header>
+
     <nav class="navbar">
+
         <div class="logo">
+
             <h2>KONGA</h2>
+
         </div>
+
         <div class="search-box">
+
             <input
                 type="text"
                 id="searchInput"
@@ -30,35 +46,63 @@
             </button>
         </div>
         <div class="nav-links">
-            <a href="login.html" id="login-link">
 
-                Login
+    <a href="login.html" id="login-link">
 
-            </a>
+        Login
 
-            <a href="signup.html">
+    </a>
 
-                Sign Up
 
-            </a>
+    <a href="signup.html">
 
-            <a href="#">
+        Sign Up
 
-                Help
+    </a>
 
-            </a>
 
-            <a href="cart.html">
+    <a href="#">
 
-                <i class="fa-solid fa-cart-shopping"></i>
+        Help
 
-                Cart
+    </a>
 
-                <span id="cart-count">0</span>
 
-            </a>
+    <a href="dashboard.html">
 
-        </div>
+        <i class="fa-solid fa-user"></i>
+
+        My Dashboard
+
+    </a>
+
+
+    <!-- WISHLIST -->
+
+    <a href="wishlist.html">
+
+    <i class="fa-solid fa-heart"></i>
+
+    Wishlist
+
+    <span id="wishlist-count">0</span>
+
+    </a>
+
+
+    <!-- CART -->
+
+    <a href="cart.html">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        Cart
+
+        <span id="cart-count">0</span>
+
+    </a>
+
+</div>
 
     </nav>
 
@@ -91,62 +135,47 @@
         </button>
 
     </div>
-
+    
 </section>
 
 <!-- ===========================
         CATEGORIES
 =========================== -->
-
 <section class="categories">
 
     <button class="category-btn"
             data-category="All">
-
         All
-
     </button>
 
     <button class="category-btn"
             data-category="Phones">
-
         Phones
-
     </button>
 
     <button class="category-btn"
             data-category="Laptops">
-
         Laptops
-
     </button>
 
     <button class="category-btn"
             data-category="Fashion">
-
         Fashion
-
     </button>
 
     <button class="category-btn"
             data-category="Electronics">
-
         Electronics
-
     </button>
 
     <button class="category-btn"
             data-category="Gaming">
-
         Gaming
-
     </button>
 
     <button class="category-btn"
             data-category="Accessories">
-
         Accessories
-
     </button>
 
 </section>
@@ -359,17 +388,25 @@
 
         <div class="footer-column">
 
-            <h3>Quick Links</h3>
+    <h3>Quick Links</h3>
 
-            <a href="#">Phones</a>
+    <a href="webpage.html?category=Phones">
+        Phones
+    </a>
 
-            <a href="#">Laptops</a>
+    <a href="webpage.html?category=Laptops">
+        Laptops
+    </a>
 
-            <a href="#">Fashion</a>
+    <a href="webpage.html?category=Fashion">
+        Fashion
+    </a>
 
-            <a href="#">Gaming</a>
+    <a href="webpage.html?category=Gaming">
+        Gaming
+    </a>
 
-        </div>
+    </div>
 
         <!-- Contact -->
 
@@ -393,18 +430,19 @@
 
             <p>Subscribe to receive updates and special offers.</p>
 
-            <form class="newsletter-form">
+            <form class="newsletter-form" id="newsletter-form">
 
-                <input
-                    type="email"
-                    placeholder="Enter your email"
-                    required>
+         <input
+             type="email"
+             id="newsletter-email"
+            placeholder="Enter your email"
+            required>
 
-                <button type="submit">
+            <button type="submit">
 
-                    Subscribe
+                Subscribe
 
-                </button>
+            </button>
 
             </form>
 
@@ -434,10 +472,20 @@
 <!-- ===========================
         JAVASCRIPT
 =========================== -->
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+
+<script src="js/firebase-config.js"></script>
+<script src="js/auth.js"></script>
 <script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+
+<!-- Toastify -->
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<!-- App -->
 <script src="js/app.js"></script>
+
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+    requireLogin();
 </script>
-</body>
-</html>

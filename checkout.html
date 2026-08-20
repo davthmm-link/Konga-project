@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Konga | Checkout</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="css/webpage.css">
     <link rel="stylesheet" href="css/checkout.css">
 
+    <!-- Font Awesome -->
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
-<body>
+<body class="has-fixed-navbar">
+
+<!-- ===========================
+        NAVIGATION
+=========================== -->
 
 <header>
 
@@ -41,25 +49,35 @@
 
 </header>
 
+<!-- ===========================
+        PAGE HEADER
+=========================== -->
+
 <section class="checkout-header">
 
     <h1>
 
         <i class="fa-solid fa-credit-card"></i>
 
-        Checkout
+        Secure Checkout
 
     </h1>
 
     <p>
-        Complete your order details below.
+
+        Complete your order details and continue to secure payment.
+
     </p>
 
 </section>
 
+<!-- ===========================
+        CHECKOUT
+=========================== -->
+
 <section class="checkout-container">
 
-    <!-- FORM -->
+    <!-- CUSTOMER DETAILS -->
 
     <div class="checkout-form">
 
@@ -92,7 +110,9 @@
 
             <button type="submit">
 
-                Place Order
+                <i class="fa-solid fa-lock"></i>
+
+                Proceed to Payment
 
             </button>
 
@@ -100,7 +120,7 @@
 
     </div>
 
-    <!-- SUMMARY -->
+    <!-- ORDER SUMMARY -->
 
     <div class="checkout-summary">
 
@@ -108,25 +128,90 @@
 
         <div id="checkout-items">
 
+            <!-- Products appear here -->
+
+        </div>
+
+        <hr>
+
+        <div class="checkout-item">
+
+            <span>Subtotal</span>
+
+            <strong>
+
+                ₦<span id="subtotal">0</span>
+
+            </strong>
+
+        </div>
+
+        <div class="checkout-item">
+
+            <span>Delivery Fee</span>
+
+            <strong>
+
+                ₦<span id="delivery-fee">2500</span>
+
+            </strong>
+
         </div>
 
         <hr>
 
         <div class="summary-total">
 
-            Total:
+            <span>Total</span>
 
-            ₦<span id="checkout-total">0</span>
+            <strong>
+
+                ₦<span id="checkout-total">0</span>
+
+            </strong>
 
         </div>
 
     </div>
 
 </section>
+
+<!-- ===========================
+        FOOTER
+=========================== -->
+
 <footer>
-    <p>© 2026 Santa Cruz | Konga Project</p>
+
+    <p>
+
+        © 2026 Santa Cruz | Konga Project
+
+    </p>
+
 </footer>
+
+<!-- ===========================
+        FIREBASE
+=========================== -->
+
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+
+<script src="js/firebase-config.js"></script>
+<script src="js/auth.js"></script>
+
+<!-- ===========================
+        PAYSTACK
+=========================== -->
+
+<script src="https://js.paystack.co/v1/inline.js"></script>
+
+<!-- ===========================
+        JAVASCRIPT
+=========================== -->
+
 <script src="js/checkout.js"></script>
 
 </body>
+
 </html>

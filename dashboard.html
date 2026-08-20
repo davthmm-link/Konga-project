@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Konga | My Dashboard</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/webpage.css">
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body class="has-fixed-navbar">
+<!-- ===========================
+        NAVIGATION
+=========================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <h2>Konga</h2>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="webpage.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Shop
+
+            </a>
+
+            <a href="orders.html">
+
+                <i class="fa-solid fa-box"></i>
+
+                My Orders
+
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- ===========================
+        DASHBOARD HEADER
+=========================== -->
+
+<section class="dashboard-header">
+
+    <div>
+
+        <h1>
+            Welcome, <span id="customer-name">Customer</span> 👋
+        </h1>
+
+        <p>
+            Manage your account, orders and shopping activity.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================
+        DASHBOARD STATS
+=========================== -->
+
+<section class="dashboard-container">
+
+    <div class="dashboard-stats">
+
+
+        <!-- TOTAL ORDERS -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fa-solid fa-box"></i>
+
+            </div>
+
+            <div>
+
+                <span>Total Orders</span>
+
+                <strong id="total-orders">0</strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- ACTIVE ORDERS -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fa-solid fa-truck"></i>
+
+            </div>
+
+            <div>
+
+                <span>Active Orders</span>
+
+                <strong id="active-orders">0</strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- WISHLIST -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fa-solid fa-heart"></i>
+
+            </div>
+
+            <div>
+
+                <span>Wishlist Items</span>
+
+                <strong id="wishlist-count">0</strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- TOTAL SPENT -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fa-solid fa-naira-sign"></i>
+
+            </div>
+
+            <div>
+
+                <span>Total Spent</span>
+
+                <strong>
+                    ₦<span id="total-spent">0</span>
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===========================
+            QUICK ACTIONS
+    ============================ -->
+
+    <div class="dashboard-card">
+
+        <div class="section-heading">
+
+            <h2>Quick Actions</h2>
+
+        </div>
+
+        <div class="quick-actions">
+
+            <a href="webpage.html">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span>Continue Shopping</span>
+
+            </a>
+
+            <a href="orders.html">
+
+                <i class="fa-solid fa-box"></i>
+
+                <span>View My Orders</span>
+
+            </a>
+
+            <a href="cart.html">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span>View Cart</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- ===========================
+        MY ACCOUNT
+    =========================== -->
+
+    <div class="dashboard-card account-card">
+
+    <div class="section-heading">
+
+        <h2>My Account</h2>
+
+    </div>
+
+    <div class="account-details">
+
+        <div class="account-info">
+
+            <div class="account-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div>
+
+                <span>Full Name</span>
+
+                <strong id="account-name">
+                    Customer
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="account-info">
+
+            <div class="account-icon">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <div>
+
+                <span>Email Address</span>
+
+                <strong id="account-email">
+                    Loading...
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="account-info">
+
+            <div class="account-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div>
+
+                <span>Account Status</span>
+
+                <strong class="account-status">
+                    Active
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <button
+        type="button"
+        id="logout-btn"
+        class="logout-btn">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        Logout
+
+    </button>
+
+    </div>
+
+
+    <!-- ===========================
+            RECENT ORDERS
+    ============================ -->
+
+    <div class="dashboard-card">
+
+        <div class="section-heading">
+
+            <h2>Recent Orders</h2>
+
+            <a href="orders.html">
+                View All
+            </a>
+
+        </div>
+
+        <div id="recent-orders">
+
+            <!-- JavaScript loads orders here -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================
+        FOOTER
+=========================== -->
+
+<footer>
+
+    <p>
+
+        © 2026 Santa Cruz | Konga Clone
+
+    </p>
+
+</footer>
+
+
+<!-- ===========================
+        FIREBASE
+=========================== -->
+
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+
+<script src="js/firebase-config.js"></script>
+
+<script src="js/auth.js"></script>
+
+
+<!-- ===========================
+        DASHBOARD JAVASCRIPT
+=========================== -->
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Konga | Order Details</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/webpage.css">
+    <link rel="stylesheet" href="css/order-details.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body class="has-fixed-navbar">
+
+<!-- ===========================
+        NAVIGATION
+=========================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <h2>Konga</h2>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="orders.html">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back To Orders
+
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+<!-- ===========================
+        PAGE HEADER
+=========================== -->
+
+<section class="details-header">
+
+    <h1>
+
+        <i class="fa-solid fa-file-invoice"></i>
+
+        Order Invoice
+
+    </h1>
+
+    <p>
+
+        Thank you for shopping with Santa Cruz.
+
+    </p>
+
+</section>
+
+<!-- ===========================
+        ORDER INFORMATION
+=========================== -->
+
+<section class="details-container">
+
+    <div class="details-card">
+
+        <h2>
+
+            Order Information
+
+        </h2>
+
+        <div class="info-grid">
+
+            <div class="info-box">
+
+                <h4>Order ID</h4>
+
+                <p id="order-id"></p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h4>Tracking Number</h4>
+
+                <p id="tracking-number"></p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h4>Payment Status</h4>
+
+                <p id="payment-status"></p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h4>Delivery Status</h4>
+
+                <p id="delivery-status"></p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h4>Payment Reference</h4>
+
+                <p id="payment-reference"></p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h4>Order Date</h4>
+
+                <p id="order-date"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+        CUSTOMER DETAILS
+=========================== -->
+
+<section class="details-container">
+
+    <div class="details-card">
+
+        <h2>
+
+            Customer Information
+
+        </h2>
+
+        <div class="info-grid">
+
+            <div class="info-box">
+
+                <h4>Full Name</h4>
+
+                <p id="customer-name"></p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h4>Email</h4>
+
+                <p id="customer-email"></p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h4>Phone</h4>
+
+                <p id="customer-phone"></p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h4>Delivery Address</h4>
+
+                <p id="customer-address"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+        PURCHASED ITEMS
+=========================== -->
+
+<section class="details-container">
+
+    <div class="details-card">
+
+        <h2>
+
+            Purchased Items
+
+        </h2>
+
+        <div id="order-items">
+
+            <!-- JavaScript loads products -->
+
+        </div>
+
+        <hr>
+
+        <div class="invoice-totals">
+
+    <div class="invoice-total-row">
+        <span>Subtotal</span>
+
+        <strong>
+            ₦<span id="invoice-subtotal">0</span>
+        </strong>
+    </div>
+
+    <div class="invoice-total-row">
+        <span>Delivery Fee</span>
+
+        <strong>
+            ₦<span id="invoice-delivery">2,500</span>
+        </strong>
+    </div>
+
+    <hr>
+
+    <div class="grand-total">
+
+        <span>Grand Total</span>
+
+        <strong>
+            ₦<span id="grand-total">0</span>
+        </strong>
+
+    </div>
+
+    </div>
+
+    <div class="invoice-total-row">
+
+        <span>Delivery Fee</span>
+
+        <strong>
+            ₦<span id="invoice-delivery">2,500</span>
+        </strong>
+
+    </div>
+
+    <hr>
+
+    <div class="grand-total">
+
+        <span>Grand Total</span>
+
+        <strong>
+            ₦<span id="grand-total">0</span>
+        </strong>
+
+    </div>
+
+</div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+        ACTION BUTTONS
+=========================== -->
+
+<section class="details-actions">
+
+    <button
+        class="print-btn"
+        onclick="window.print()">
+
+        <i class="fa-solid fa-print"></i>
+
+        Print Invoice
+
+    </button>
+
+    <a
+        href="orders.html"
+        class="back-btn">
+
+        <i class="fa-solid fa-list"></i>
+
+        Back To Orders
+
+    </a>
+
+</section>
+
+<!-- ===========================
+        FOOTER
+=========================== -->
+
+<footer>
+
+    <p>
+
+        © 2026 Santa Cruz | Konga Clone
+
+    </p>
+
+</footer>
+
+<!-- Firebase -->
+
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+
+<script src="js/firebase-config.js"></script>
+<script src="js/auth.js"></script>
+
+<!-- JavaScript -->
+
+<script src="js/order-details.js"></script>
+
+</body>
+
+</html>

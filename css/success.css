@@ -1,144 +1,123 @@
-/* ===========================
-        SUCCESS PAGE
-=========================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
-
-    font-family:Arial, Helvetica, sans-serif;
     background:#f5f5f5;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    padding:20px;
+    font-family:Arial, Helvetica, sans-serif;
 }
-
-/* ===========================
-        CONTAINER
-=========================== */
 
 .success-container{
-    width:100%;
-    max-width:600px;
-}
 
-/* ===========================
-        CARD
-=========================== */
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:40px 20px;
+}
 
 .success-card{
-    background:#fff;
-    padding:50px 40px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.1);
-    animation:fadeIn .8s ease;
-}
 
-/* ===========================
-        ICON
-=========================== */
+    background:#fff;
+
+    width:100%;
+
+    max-width:700px;
+
+    border-radius:12px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    padding:40px;
+
+    text-align:center;
+}
 
 .success-icon{
-    font-size:90px;
-    color:#28a745;
-    margin-bottom:25px;
-}
 
-/* ===========================
-        TEXT
-=========================== */
+    font-size:75px;
+
+    color:#16a34a;
+
+    margin-bottom:20px;
+}
 
 .success-card h1{
-    color:#222;
-    font-size:34px;
-    margin-bottom:15px;
-}
 
-.success-card p{
-    color:#666;
-    font-size:18px;
-    line-height:1.7;
     margin-bottom:10px;
 }
 
-/* ===========================
-        ORDER INFO
-=========================== */
+.success-card p{
 
-.order-info{
-    margin:35px 0;
-    padding:20px;
-    background:#f8f8f8;
-    border-radius:10px;
+    color:#666;
+
+    margin-bottom:30px;
 }
 
-.order-info p{
-    color:#333;
-    font-size:17px;
-    margin:0;
+.success-details{
+
+    text-align:left;
+
+    margin-top:20px;
 }
 
-/* ===========================
-        BUTTON
-=========================== */
+.detail-row{
 
-#continue-shopping{
-    background:#ff6600;
-    color:#fff;
-    border:none;
-    padding:15px 35px;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:18px;
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #eee;
+}
+
+.success-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:35px;
+
+    flex-wrap:wrap;
+}
+
+.success-buttons a{
+
+    text-decoration:none;
+
+    padding:14px 24px;
+
+    border-radius:6px;
+
+    font-weight:bold;
+
     transition:.3s;
 }
 
-#continue-shopping:hover{
-    background:#e65c00;
-    transform:translateY(-2px);
+.continue-btn{
+
+    background:#ff6200;
+
+    color:#fff;
 }
 
-/* ===========================
-        ANIMATION
-=========================== */
+.continue-btn:hover{
 
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    background:#e65a00;
 }
 
-/* ===========================
-        RESPONSIVE
-=========================== */
+.orders-btn{
 
-@media(max-width:600px){
-    .success-card{
-        padding:35px 25px;
-    }
-    .success-card h1{
-        font-size:28px;
-    }
-    .success-icon{
-        font-size:75px;
-    }
-    .success-card p{
-        font-size:16px;
-    }
-    #continue-shopping{
-        width:100%;
-    }
+    background:#0d6efd;
+
+    color:#fff;
+}
+
+.orders-btn:hover{
+
+    background:#0b5ed7;
 }

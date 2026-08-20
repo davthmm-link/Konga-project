@@ -1,36 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Successful | Konga</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Order Successful | Konga Clone</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/webpage.css">
     <link rel="stylesheet" href="css/success.css">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
+
 <body>
-<div class="success-container">
+
+<!-- ===========================
+        SUCCESS CARD
+=========================== -->
+
+<section class="success-container">
+
     <div class="success-card">
-        <i class="fa-solid fa-circle-check success-icon"></i>
-        <h1>Order Placed Successfully!</h1>
-        <p>
-            Thank you for shopping with Konga.
-        </p>
-        <p>
-            Your order has been received and is being processed.
-        </p>
-        <div class="order-info">
-            <p>
-                <strong>Order Date:</strong>
-                <span id="order-date"></span>
-            </p>
+
+        <div class="success-icon">
+
+            <i class="fa-solid fa-circle-check"></i>
+
         </div>
-        <button id="continue-shopping">
-            Continue Shopping
-        </button>
+
+        <h1>Payment Successful!</h1>
+
+        <p>
+
+            Thank you for shopping with Konga.
+
+        </p>
+
+        <div class="success-details">
+
+            <div class="detail-row">
+
+                <span>Customer</span>
+
+                <strong id="customer-name"></strong>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span>Order ID</span>
+
+                <strong id="order-id"></strong>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span>Tracking Number</span>
+
+                <strong id="tracking-number"></strong>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span>Payment Reference</span>
+
+                <strong id="payment-reference"></strong>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span>Total Paid</span>
+
+                <strong>
+
+                    ₦<span id="order-total"></span>
+
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="success-buttons">
+
+            <a href="webpage.html" class="continue-btn">
+
+                Continue Shopping
+
+            </a>
+
+            <a href="orders.html" class="orders-btn">
+
+                View My Orders
+
+            </a>
+
+        </div>
+
     </div>
-</div>
+
+</section>
+
+<!-- Firebase -->
+
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+
+<script src="js/firebase-config.js"></script>
+<script src="js/auth.js"></script>
+
+<!-- Success JS -->
+
 <script src="js/success.js"></script>
+
 </body>
 </html>

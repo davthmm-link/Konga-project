@@ -240,6 +240,15 @@ body{
 .empty-cart a:hover{
     background:#e65c00;
 }
+
+/* ===========================
+   FIXED NAVBAR PAGE SPACING
+=========================== */
+
+.has-fixed-navbar {
+    padding-top: 75px;
+}
+
 /* ===========================
         RESPONSIVE
 =========================== */

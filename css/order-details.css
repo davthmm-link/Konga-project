@@ -1,0 +1,550 @@
+/* ===========================
+   ORDER DETAILS PAGE
+=========================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===========================
+   PAGE HEADER
+=========================== */
+
+.details-header {
+    text-align: center;
+    padding: 45px 20px 30px;
+}
+
+.details-header h1 {
+    margin: 0 0 10px;
+    font-size: 34px;
+    color: #333;
+}
+
+.details-header h1 i {
+    margin-right: 8px;
+}
+
+.details-header p {
+    margin: 0;
+    color: #777;
+    font-size: 16px;
+}
+
+/* ===========================
+   MAIN CONTAINER
+=========================== */
+
+.details-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto 25px;
+}
+
+/* ===========================
+   DETAILS CARD
+=========================== */
+
+.details-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.details-card h2 {
+    margin: 0 0 25px;
+    color: #333;
+    font-size: 22px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+/* ===========================
+   INFORMATION GRID
+=========================== */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.info-box {
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 18px;
+}
+
+.info-box h4 {
+    margin: 0 0 8px;
+    color: #777;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.info-box p {
+    margin: 0;
+    color: #222;
+    font-size: 15px;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+/* ===========================
+   PURCHASED ITEMS
+=========================== */
+
+#order-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.order-item-info {
+    flex: 1;
+}
+
+.order-item-name {
+    margin: 0 0 7px;
+    font-size: 17px;
+    color: #222;
+}
+
+.order-item-category {
+    margin: 0 0 5px;
+    color: #777;
+    font-size: 13px;
+}
+
+.order-item-quantity {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.order-item-price {
+    text-align: right;
+    min-width: 150px;
+}
+
+.order-item-price p {
+    margin: 0 0 6px;
+    color: #777;
+    font-size: 13px;
+}
+
+.order-item-price strong {
+    color: #ff6200;
+    font-size: 18px;
+}
+
+/* ===========================
+   DIVIDER
+=========================== */
+
+.details-card hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 25px 0;
+}
+
+/* ===========================
+   GRAND TOTAL
+=========================== */
+
+.grand-total {
+    text-align: right;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6200;
+}
+
+/* ===========================
+   ACTION BUTTONS
+=========================== */
+
+.details-actions {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.print-btn,
+.back-btn {
+    border: none;
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.print-btn {
+    background: #ff6200;
+    color: #fff;
+}
+
+.print-btn:hover {
+    background: #e45800;
+}
+
+.back-btn {
+    background: #333;
+    color: #fff;
+}
+
+.back-btn:hover {
+    background: #222;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* ===========================
+   MOBILE RESPONSIVENESS
+=========================== */
+
+@media (max-width: 768px) {
+
+    .details-header {
+        padding: 35px 15px 25px;
+    }
+
+    .details-header h1 {
+        font-size: 28px;
+    }
+
+    .details-container {
+        width: 92%;
+    }
+
+    .details-card {
+        padding: 20px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .order-item-price {
+        width: 100%;
+        text-align: left;
+    }
+
+    .grand-total {
+        text-align: left;
+        font-size: 21px;
+    }
+
+    .details-actions {
+        width: 92%;
+        flex-direction: column;
+    }
+
+    .print-btn,
+    .back-btn {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+/* ===========================
+   PRINT STYLES
+=========================== */
+
+@media print {
+
+    body {
+        background: #fff;
+    }
+
+    header,
+    footer,
+    .details-header,
+    .details-actions {
+        display: none !important;
+    }
+
+    .details-container {
+        width: 100%;
+        max-width: none;
+        margin: 0 0 20px;
+    }
+
+    .details-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        border-radius: 0;
+    }
+
+    .details-card h2 {
+        color: #000;
+    }
+
+    .info-box {
+        background: #fff;
+    }
+
+    .order-item {
+        background: #fff;
+    }
+
+    .grand-total {
+        color: #000;
+    }
+}
+
+/* ===========================
+   INVOICE TOTALS
+=========================== */
+
+.invoice-totals {
+    margin-top: 10px;
+    margin-left: auto;
+    max-width: 400px;
+}
+
+.invoice-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 0;
+
+    color: #555;
+    font-size: 15px;
+}
+
+.invoice-total-row strong {
+    color: #333;
+}
+
+.invoice-totals hr {
+    margin: 12px 0;
+}
+
+.grand-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    color: #ff6200;
+}
+
+.grand-total strong {
+    color: #ff6200;
+}
+
+
+/* ===========================
+   PROFESSIONAL PRINT INVOICE
+=========================== */
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 15mm;
+    }
+
+    body {
+        background: #fff;
+        color: #000;
+    }
+
+    header,
+    footer,
+    .details-header,
+    .details-actions {
+        display: none !important;
+    }
+
+    .details-container {
+        width: 100%;
+        max-width: none;
+        margin: 0 0 20px;
+    }
+
+    .details-card {
+        width: 100%;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    .details-card h2 {
+        color: #000;
+        border-bottom: 2px solid #000;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-box {
+        background: #fff;
+        border: 1px solid #ccc;
+    }
+
+    .order-item {
+        background: #fff;
+        border: 1px solid #ccc;
+    }
+
+    .order-item-price strong {
+        color: #000;
+    }
+
+    .invoice-totals {
+        max-width: 350px;
+    }
+
+    .grand-total {
+        color: #000;
+    }
+
+    .grand-total strong {
+        color: #000;
+    }
+
+}
+
+/* ===========================
+   INVOICE TOTALS
+=========================== */
+
+.invoice-totals {
+    max-width: 400px;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.invoice-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 0;
+
+    color: #555;
+    font-size: 15px;
+}
+
+.invoice-total-row strong {
+    color: #333;
+}
+
+.invoice-totals hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 12px 0;
+}
+
+.grand-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.grand-total,
+.grand-total strong {
+    color: #ff6200;
+}
+
+/* ===========================
+   FIXED NAVBAR PAGE SPACING
+=========================== */
+
+.has-fixed-navbar {
+    padding-top: 75px;
+}
+
+
+/* ===========================
+   PRINT INVOICE
+=========================== */
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 15mm;
+    }
+
+    body {
+        background: #fff;
+    }
+
+    header,
+    footer,
+    .details-header,
+    .details-actions {
+        display: none !important;
+    }
+
+    .details-container {
+        width: 100%;
+        max-width: none;
+        margin: 0 0 20px;
+    }
+
+    .details-card {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+    }
+
+    .info-box,
+    .order-item {
+        background: #fff;
+        border: 1px solid #ccc;
+    }
+
+    .grand-total,
+    .grand-total strong {
+        color: #000;
+    }
+
+}

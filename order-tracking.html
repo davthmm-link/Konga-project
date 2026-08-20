@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Konga | Track Order</title>
+
+    <link rel="stylesheet" href="css/webpage.css">
+    <link rel="stylesheet" href="css/order-tracking.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body class="has-fixed-navbar">
+
+<!-- ===========================
+        NAVIGATION
+=========================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <h2>Konga</h2>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="orders.html">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back To Orders
+
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- ===========================
+        PAGE HEADER
+=========================== -->
+
+<section class="tracking-header">
+
+    <h1>
+
+        <i class="fa-solid fa-truck-fast"></i>
+
+        Track Your Order
+
+    </h1>
+
+    <p>
+
+        Follow the progress of your order from payment to delivery.
+
+    </p>
+
+</section>
+
+
+<!-- ===========================
+        ORDER SUMMARY
+=========================== -->
+
+<section class="tracking-container">
+
+    <div class="tracking-card">
+
+        <div class="tracking-summary">
+
+            <div>
+
+                <span>Order ID</span>
+
+                <strong id="tracking-order-id"></strong>
+
+            </div>
+
+            <div>
+
+                <span>Tracking Number</span>
+
+                <strong id="tracking-number"></strong>
+
+            </div>
+
+            <div>
+
+                <span>Order Date</span>
+
+                <strong id="tracking-date"></strong>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <!-- ===========================
+                CURRENT STATUS
+        ============================ -->
+
+        <div class="current-status">
+
+            <span>Current Status</span>
+
+            <strong id="current-status"></strong>
+
+        </div>
+
+
+        <!-- ===========================
+                TRACKING TIMELINE
+        ============================ -->
+
+        <div class="tracking-timeline">
+
+            <div class="timeline-step completed">
+
+                <div class="timeline-icon">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>Payment Confirmed</h3>
+
+                    <p>
+
+                        Your payment has been successfully confirmed.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-step completed">
+
+                <div class="timeline-icon">
+
+                    <i class="fa-solid fa-box"></i>
+
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>Order Processing</h3>
+
+                    <p>
+
+                        Your order has been received and is being processed.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-step">
+
+                <div class="timeline-icon">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>Order Packed</h3>
+
+                    <p>
+
+                        Your items will be packed and prepared for dispatch.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-step">
+
+                <div class="timeline-icon">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>Out for Delivery</h3>
+
+                    <p>
+
+                        Your order will be handed over to the delivery team.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-step">
+
+                <div class="timeline-icon">
+
+                    <i class="fa-solid fa-house"></i>
+
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>Delivered</h3>
+
+                    <p>
+
+                        Your order has been delivered successfully.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===========================
+                ACTIONS
+        ============================ -->
+
+        <div class="tracking-actions">
+
+            <a href="order-details.html"
+               id="details-link"
+               class="details-btn">
+
+                <i class="fa-solid fa-file-invoice"></i>
+
+                Order Details
+
+            </a>
+
+            <a href="orders.html"
+               class="orders-btn">
+
+                <i class="fa-solid fa-box"></i>
+
+                My Orders
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================
+        FOOTER
+=========================== -->
+
+<footer>
+
+    <p>
+
+        © 2026 Santa Cruz | Konga Clone
+
+    </p>
+
+</footer>
+
+
+<!-- ===========================
+        JAVASCRIPT
+=========================== -->
+
+<script src="js/order-tracking.js"></script>
+
+</body>
+
+</html>

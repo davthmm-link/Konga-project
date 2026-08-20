@@ -1,44 +1,49 @@
 console.log("Success.js Loaded Successfully");
 
 // ===========================
-// LOAD ORDER
+// LOAD LATEST ORDER
 // ===========================
 
 const latestOrder = JSON.parse(localStorage.getItem("latestOrder"));
-const orderDate = document.getElementById("order-date");
-const continueShopping = document.getElementById("continue-shopping");
 
-// ===========================
-// DISPLAY ORDER DATE
-// ===========================
-
-if (latestOrder && orderDate) {
-    orderDate.innerText = latestOrder.date;
-} else if (orderDate) {
-    orderDate.innerText = new Date().toLocaleString();
+if (!latestOrder) {
+    alert("No recent order found.");
+    window.location.href = "webpage.html";
 }
 
 // ===========================
-// CONTINUE SHOPPING
+// DISPLAY ORDER DETAILS
 // ===========================
 
-if (continueShopping) {
-    continueShopping.addEventListener("click", function () {
-        // Remove the saved order after it has been viewed
-        localStorage.removeItem("latestOrder");
-        window.location.href = "webpage.html";
-    });
+document.getElementById("customer-name").innerText =
+    latestOrder.customer.fullname;
+
+document.getElementById("order-id").innerText =
+    latestOrder.orderId;
+
+document.getElementById("tracking-number").innerText =
+    latestOrder.trackingNumber;
+
+document.getElementById("payment-reference").innerText =
+    latestOrder.reference;
+
+document.getElementById("order-total").innerText =
+    Number(latestOrder.total).toLocaleString();
+
+// ===========================
+// SAVE ORDER HISTORY
+// ===========================
+
+let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+// Prevent duplicate order from being saved
+const exists = orders.some(function(order){
+    return order.orderId === latestOrder.orderId;
+});
+
+if(!exists){
+    orders.push(latestOrder);
+    localStorage.setItem("orders", JSON.stringify(orders));
 }
 
-// ===========================
-// PREVENT GOING BACK TO CHECKOUT
-// ===========================
-history.pushState(null, null, location.href);
-window.onpopstate = function () {
-    history.go(1);
-};
-// ===========================
-// PAGE LOADED
-// ===========================
-
-console.log("Order Completed Successfully ✅");
+console.log("Order Loaded Successfully ✅");

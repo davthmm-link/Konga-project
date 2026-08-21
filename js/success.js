@@ -8,7 +8,7 @@ const latestOrder = JSON.parse(localStorage.getItem("latestOrder"));
 
 if (!latestOrder) {
     alert("No recent order found.");
-    window.location.href = "webpage.html";
+    window.location.href = "index.html";
 }
 
 // ===========================

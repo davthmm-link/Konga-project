@@ -46,7 +46,7 @@ function displayCart() {
             <i class="fa-solid fa-cart-shopping"></i>
             <h2>Your cart is empty</h2>
             <p>Add some amazing products to your shopping cart.</p>
-            <a href="webpage.html">
+            <a href="index.html">
                 Continue Shopping
             </a>
         </div>

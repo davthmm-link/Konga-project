@@ -88,7 +88,7 @@ auth.onAuthStateChanged(function (user) {
             window.location.pathname.split("/").pop();
 
         const protectedPages = [
-            "webpage.html",
+            "index.html",
             "cart.html",
             "checkout.html"
         ];

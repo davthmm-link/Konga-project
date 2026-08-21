@@ -152,7 +152,7 @@ if (recentOrders) {
                     You haven't placed any orders yet.
                 </p>
 
-                <a href="webpage.html">
+                <a href="index.html">
                     Start Shopping
                 </a>
 

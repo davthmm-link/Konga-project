@@ -51,7 +51,7 @@ function displayWishlist() {
 
                 </p>
 
-                <a href="webpage.html">
+                <a href="index.html">
 
                     Continue Shopping
 

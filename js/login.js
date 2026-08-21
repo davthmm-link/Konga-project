@@ -30,7 +30,7 @@ if (loginForm) {
 
                 alert("Login Successful!");
 
-                window.location.href = "webpage.html";
+                window.location.href = "/";
             })
 
             .catch((error) => {
